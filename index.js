@@ -13,6 +13,7 @@ stop_btn.addEventListener("click", stop);
 reset_btn.addEventListener("click", reset);
 
 // Update the timer
+// calculations of setting the timer
 function timer () {
 	seconds++;
 
@@ -27,7 +28,7 @@ function timer () {
 
 	time_el.innerText = `${hrs}:${mins}:${secs}`;
 }
-
+// this function is to start the timer
 function start () {
 	if (interval) {
 		return
@@ -35,12 +36,12 @@ function start () {
 
 	interval = setInterval(timer, 1000);
 }
-
+// this function is to stop the ruining timer
 function stop () {
 	clearInterval(interval);
 	interval = null;
 }
-
+// this function is to reset the timer
 function reset () {
 	stop();
 	seconds = 0;
